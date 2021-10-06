@@ -1,0 +1,162 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+\pdfpagewidth 8.5in
+\pdfpageheight 11.6in
+\linespread{1.3}
+\usepackage{anysize}
+\marginsize{2.5cm}{2.5cm}{2.5cm}{2.5cm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[magyar]{babel}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{braket}
+\usepackage[unicode,pdftex]{hyperref}
+\usepackage{hyperref}
+\usepackage{breqn}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.3,0.3,0.3}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.90,0.90,0.87}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\small\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\DeclareMathOperator{\Ai}{Ai}
+\DeclareMathOperator{\Bi}{Bi}
+\DeclareMathOperator{\Aip}{Ai^\prime}
+\DeclareMathOperator{\Bip}{Bi^\prime}
+\DeclareMathOperator{\Ti}{Ti}
+\DeclareMathOperator{\ctg}{ctg}
+\DeclareMathOperator{\sgn}{sgn}
+%\DeclareMathOperator{\max}{max}
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\op}[1]{\hat{#1}}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand*\Laplace{\mathop{}\!\mathbin\bigtriangleup}
+
+\newcommand{\aeqref}[1]{\az{\eqref{#1}}}
+\newcommand{\Aeqref}[1]{\Az{\eqref{#1}}}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\hypersetup{	
+	pdftitle={Pásztázó elektronmikroszkópia},
+	pdfauthor={Kürti Zoltán}}
+
+\frenchspacing
+\begin{document}
+
+	\centerline{\bf\LARGE Pásztázó elektronmikroszkópia}
+
+	\vskip0.4truein\centerline{\Large\sc Kürti Zoltán}\vskip0.10truein
+	%\centerline{\includegraphics[scale=0.5]{./elte_cimer_color.pdf}}
+	\vskip0.4truein
+	\centerline{\Large B csoport}\vskip0.2truein
+	\centerline{\Large{Mérés dátuma: 2021.09.23.}}\vskip0.2truein
+	\centerline{\Large{Leadás dátuma: 2021.10.07.}}\vskip0.2truein
+	\thispagestyle{empty}
+	\newpage
+	\section{Bevezető}
+		A labor célja a pásztázó elektronmikroszkóp alapvető tulajdonságaival és használatával való megismerkedés volt. A mérés során SE (secondary electron mode) és BSE (back scattered electron mode) módokban készítettünk képeket. SE módban a felület geometriájáról kapunk információt, BSE módban a felület geometriáján túl az anyag rendszáma nagyban befolyásolja a visszaszórt elektronok számát, így úgy nevezett Z kontrasztos képeket kapunk.
+	\section{Biológiai minta}
+		A biológiai mintát, egy kis méretű rovart, vékony arany bevonattal preparálták. Ennek a szerepe, hogy a minta felülete jó vezető legyen. Ennek köszönhetően az elektronmikroszkóp sugara nem okoz nagy negatív töltéssűrűséget a mintán a fókuszpontban, ezzel elkerülve a minta közelében létrejövő ismeretlen elektromos mező hatásait.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{./figs/2021-09-23-Biology_sample_002(x1.5k).pdf}]
+			\caption{BSE módban készült kép a biólógiai mintáról. A vékony arany bevonat ellenére (nincs Z kontraszt) kontrasztos a kép, ami azt mutatja, hogy a BSE mód is legalább kis mértékben érzékeny a minta geometriájára.}
+			\label{biology1}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{./figs/2021-09-23-Biology_sample_003(x1.5k).pdf}]
+			\caption{SE módban készült kép, \aref{biology1}. képhez képest a kontraszt nagyobb. Ez így várható, hiszen az SE mód a minta geometriájára a legérzékenyebb.}
+		\end{figure}
+	\section{Titán minta}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{./figs/2021-09-23-Titanium_sample_007(x50).pdf}]
+			\caption{}
+			\label{}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{./figs/2021-09-23-Titanium_sample_008(x1.0k).pdf}]
+			\caption{}
+			\label{}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{./figs/2021-09-23-Titanium_sample_009(x1.0k).pdf}]
+			\caption{}
+			\label{}
+		\end{figure}
+	\section{TEM rács}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{./figs/2021-09-23-TEM_sample_006(x80).pdf}]
+			\caption{}
+			\label{temgrid}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{./figs/2dfft.pdf}]
+			\caption{}
+			\label{2dfft}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{./figs/fftlines.pdf}]
+			\caption{}
+			\label{fftlines}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{./figs/1dpsd.pdf}]
+			\caption{}
+			\label{1dpsd}
+		\end{figure}
+	\bibliographystyle{abeld}
+    \bibliography{tex/ref}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
