@@ -149,12 +149,29 @@
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=1]{./figs/2021-09-23-TEM_sample_006(x80).pdf}
-			\caption{}
+			\caption{TEM rácsról készült BSE kép.}
 			\label{temgrid}
 		\end{figure}
 		Az alább leírt számításokhoz tartozó Python kód megtalálható a \url{https://github.com/KurtiZoltan/SEMLabor} címen.
 		
-		
+		A numpy könyvtárban található FFT függvények a következő konvenciót használják:
+		\begin{equation}
+			A_l = \sum_{m=0}^{n-1}a_m\exp\left\{-2\pi i\frac{ml}{n}\right\}.
+			\label{fftconv}
+		\end{equation}
+		Az exponenciális függvény argumentumában a törtet a pixelmérettel, $D$-vel bővítve a következő tényezőket csoportosíthatjuk:
+		\begin{equation}
+			\begin{split}
+				k_0 =& \frac{2\pi}{nD},\\
+				x   =& mD,\\
+				k   =& lk_0.
+			\end{split}
+		\end{equation}
+		Ezekkel a jelölésekkel \aeqref{fftconv} egyenlet alakja
+		\begin{equation}
+			A_l = \sum_x a(x)\exp\left\{-ilk_0x\right\},
+		\end{equation}
+		tehát a fourier transzformált képen egy pixelhez tartozó hullámszám vektor változás a $k_0$. Ez azt jelenti, hogy a TEM rácsról készült kép esetében az $x$ és $y$ irányokban a pixelekhez különböző $k_0$ tartozik. Amennyiben a TEM rács nem párhuzamos az $x$ és $y$ irányokkal, az egy dimenziós fourier spektrumon található csúcs távolságának meghatározásában ezt a különbséget figyelembe kell venni. Hogy demonstráljam a programom helyességét, azt a képet választottam, ahol a rács ferdén áll, és két különböző irány mentén lemértem az első csúcs távolságát. Amennyiben a program helyesen működik, a két irányban mért periódus megegyezik, mivel a háló négyzetrácsos.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=1]{./figs/2dfft.pdf}
