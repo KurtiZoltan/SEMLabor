@@ -93,57 +93,82 @@
 		A biológiai mintát, egy kis méretű rovart, vékony arany bevonattal preparálták. Ennek a szerepe, hogy a minta felülete jó vezető legyen. Ennek köszönhetően az elektronmikroszkóp sugara nem okoz nagy negatív töltéssűrűséget a mintán a fókuszpontban, ezzel elkerülve a minta közelében létrejövő ismeretlen elektromos mező hatásait.
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=1]{./figs/2021-09-23-Biology_sample_002(x1.5k).pdf}]
+			\includegraphics[scale=1]{./figs/2021-09-23-Biology_sample_002(x1.5k).pdf}
 			\caption{BSE módban készült kép a biólógiai mintáról. A vékony arany bevonat ellenére (nincs Z kontraszt) kontrasztos a kép, ami azt mutatja, hogy a BSE mód is legalább kis mértékben érzékeny a minta geometriájára.}
 			\label{biology1}
 		\end{figure}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=1]{./figs/2021-09-23-Biology_sample_003(x1.5k).pdf}]
+			\includegraphics[scale=1]{./figs/2021-09-23-Biology_sample_003(x1.5k).pdf}
 			\caption{SE módban készült kép, \aref{biology1}. képhez képest a kontraszt nagyobb. Ez így várható, hiszen az SE mód a minta geometriájára a legérzékenyebb.}
 		\end{figure}
 	\section{Titán minta}
+		A titánból készült mintának volt egy lyukacsos része, erről készült \aref{Tiholes}. kép SE módban. Ez a kép jól illusztrálja, hogy SE módbban a geometriai információt hogyan érzékeli az elektronmikroszkóp. Lázható, hogy az üregek sötétek, ennek az az oka, hogy a kilökődő másodlagos elektronok nagy része az üreg falán landol, nem jut ki a résen, így a másodlagos elektron detektor csak kevés elektront fog detektálni. Hasonló, de kevésbé drasztikusan jelen van ez az effektus lejtők és egyéb geometriai alakzatok esetében is. 
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=1]{./figs/2021-09-23-Titanium_sample_007(x50).pdf}]
-			\caption{}
-			\label{}
+			\includegraphics[scale=1]{./figs/2021-09-23-Titanium_sample_007(x50).pdf}
+			\caption{SE módban készült kép a titán mintáról.}
+			\label{Tiholes}
+		\end{figure}
+		A titán mintán a Z kontraszt is jól szemléltethető. A minta felszínén vannak kis szennyeződések, melyek a BSE módban készül \ref{tibse}. ábrán sötétebbek, mint a titán háttér. Ez arra utal, hogy a szennyeződés a titánnál kisebb rendszámú elemekből áll. \Aref{tise}. és \aref{tibse}. kép a titán minta ugyan arról a részéről készült.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{./figs/2021-09-23-Titanium_sample_008(x1.0k).pdf}
+			\caption{SE módban készült kép a titán felszíni szennyeződéseiről.}
+			\label{tise}
 		\end{figure}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=1]{./figs/2021-09-23-Titanium_sample_008(x1.0k).pdf}]
-			\caption{}
-			\label{}
+			\includegraphics[scale=1]{./figs/2021-09-23-Titanium_sample_009(x1.0k).pdf}
+			\caption{BSE módban készült kép a titán felszíni szennyeződéseiről.}
+			\label{tibse}
 		\end{figure}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=1]{./figs/2021-09-23-Titanium_sample_009(x1.0k).pdf}]
-			\caption{}
-			\label{}
-		\end{figure}
+		\subsection{Röntgen spektroszkópia}
+			Az elektronmikroszkópban van egy beépített röntgen detektor is. A minta által kibocsátott röntgen sugarak az anyagi minőségtől függnek, és alkalmasak a minta kvalitatív vizsgálatára is. Mivel a elektronok jól fókuszáltak, az anyagi minőséget kis, a mikroszkóp felbontásának megfelelő területeken lehet vizsgálni. Két pontban végeztük el a vizsgálatot. Az első pontot az egyik BSE módban sötétnek látszó szennyeződésén vettük fel, a másodikat pedig a tiszta titán háttéren.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.7]{./figs/spots.png}
+				\caption{A röntgen spektrumok felvételéhez használt két pont.}
+				\label{}
+			\end{figure}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.7]{./figs/spectrum1.png}
+				\caption{Spectrum 1}
+				\label{specrum1}
+			\end{figure}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.7]{./figs/spectrum2.png}
+				\caption{Spectrum 2}
+				\label{spectrum2}
+			\end{figure}
 	\section{TEM rács}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=1]{./figs/2021-09-23-TEM_sample_006(x80).pdf}]
+			\includegraphics[scale=1]{./figs/2021-09-23-TEM_sample_006(x80).pdf}
 			\caption{}
 			\label{temgrid}
 		\end{figure}
+		Az alább leírt számításokhoz tartozó Python kód megtalálható a \url{https://github.com/KurtiZoltan/SEMLabor} címen.
+		
+		
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=1]{./figs/2dfft.pdf}]
-			\caption{}
+			\includegraphics[scale=1]{./figs/2dfft.pdf}
+			\caption{\Aref{temgrid}. kép kétdimenziós diszkrét Fourier-transzformáltja. Az ábrázolhatóság kedvéért az ábrán a spektrum abszolútérték négyzetét ábrázoltam logaritmikus skálán.}
 			\label{2dfft}
 		\end{figure}
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=1]{./figs/fftlines.pdf}]
-			\caption{}
+			\caption{\Aref{2dfft}. ábra középpontja kinagyítva. \Aref{temgrid}. ábrán látható rácshoz tartozó irányokra a középponton áthaladó szakaszokat illesztettem a meredekség megbecsülésével.}
 			\label{fftlines}
 		\end{figure}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=1]{./figs/1dpsd.pdf}]
-			\caption{}
+			\includegraphics[scale=1]{./figs/1dpsd.pdf}
+			\caption{\Aref{fftlines}. ábrán látható piros és kék irányokhoz tartozó spektrum abszolútérték négyzete, logaritmikus skálán, a narancssárga függőleges vonalak a periódushoz tartozó hullámszám egész számú többszörösei.}
 			\label{1dpsd}
 		\end{figure}
 	\bibliographystyle{abeld}
