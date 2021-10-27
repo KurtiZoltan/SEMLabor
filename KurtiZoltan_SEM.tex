@@ -85,16 +85,47 @@
 	\centerline{\Large B csoport}\vskip0.2truein
 	\centerline{\Large{Mérés dátuma: 2021.09.23.}}\vskip0.2truein
 	\centerline{\Large{Leadás dátuma: 2021.10.07.}}\vskip0.2truein
+	\centerline{\Large{Jaítás dátuma: 2021.10.27.}}\vskip0.2truein
 	\thispagestyle{empty}
 	\newpage
+	\tableofcontents
+	\newpage
 	\section{Bevezető}
-		A labor célja a pásztázó elektronmikroszkóp alapvető tulajdonságaival és használatával való megismerkedés volt. A mérés során SE (secondary electron mode) és BSE (back scattered electron mode) módokban készítettünk képeket. SE módban a felület geometriájáról kapunk információt, BSE módban a felület geometriáján túl az anyag rendszáma nagyban befolyásolja a visszaszórt elektronok számát, így úgynevezett Z kontrasztos képeket kapunk.
-	\section{Biológiai minta}
-		A biológiai mintát, egy kis méretű rovart, vékony arany bevonattal preparálták. A bevonat szerepe, hogy a minta felülete jó vezető legyen. Ennek köszönhetően az elektronmikroszkóp sugara nem okoz nagy negatív töltéssűrűséget a mintán a fókuszpontban, ezzel elkerülve a minta közelében létrejövő ismeretlen elektromos mező hatásait.
+	\subsection{A mérés során használt módszerek}
+		A labor célja a pásztázó elektronmikroszkóp alapvető tulajdonságaival és használatával való megismerkedés volt. A mérés során SE (secondary electron mode) és BSE (back scattered electron mode) módokban készítettünk képeket.
+		%-Nem igazán vannak SE és BSE módok, hanem szekunder és visszaszórt a detektorokkal végezzük a mérést, vagy ha máshogy akarjuk megfogalmazni, akkor a szekunder és visszaszórt elektronokat használjuk képalkotásra.
+		%-A különböző módok alatt eredetileg is a különböző detektorok használatát értettem, most már expliciten le is írtam. (Ha jól emlékszem a szoftverben mode-oknak nevezték azt a lehetőséget, ahol a képalkotáshoz használt detektort kiválasztottuk, és szerintem a képeken is a SE M és BSE M-ből az M a mode-ra utal, ezért használtam ezt a szót.)
+		Az elektronsugár a két módban megegyezik, a képalkotás módjában van a különbség. SE módban a másodlagos elektron detektor működik, és a felület geometriájáról kapunk információt. BSE módban a visszaszórt elektron detektor aktív. A felület geometriáján túl az anyag rendszáma nagyban befolyásolja a visszaszórt elektronok számát, így úgynevezett Z kontrasztos képeket kapunk BSE módban.
+		%-A bevezetésben egy SEM felépítése ábra, illetve egy-egy szó a röntgen és Auger-elektronokkal kapcsolatban hiányzik.
+		%-Nincs kommentem, kiegészítettem.
+		A mérés során használtunk még egy röntgen detektort is. Az atomok a elektronsugár hatására elveszíthetik belső elektronjaikat is. Egy ilyen hiányzó elektron a kilökődés után betöltődik, és cserébe az anyagra jellemző energiájú röntgen fotont bocsát ki. Ezeknek a fotonoknak az energiáját méri meg a röntgen detektor, és a mérés során az anyagi minőség meghatározására használtuk.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{./figs/image-001.png}
+			\caption{A pásztázó elektronmikroszkóp fő részei}
+		\end{figure}
+	\subsection{További módszerek}
+		Az elektronsugár-anyag kölcsönhatásnak lehet terméke még az úgynevezett Auger elektron. Az Auger-elektronok képződése az előzőhöz hasonlóan egy röntgen foton képződésével kezdődik, melyet egy külső elektron elnyel, és így kilökődik az atomból. Érdemes megjegyezni, hogy ez a szemléletes kép nem teljesen precíz, hiszen a közbülső röntgen foton virtuális foton, így nem feltétlenül tesz eleget a szokásos nulla tömegű részecskékre vonatkozó energia-momentum relációnak. A röntgen fotonokhoz hasonlóan az Auger-elektronok spektruma is az anyagi minőségre jellemző.
+		
+		%-A végére 2 dolgot: az EBSD és FIB megemlítése kimaradt, ezt azért tartom fontosnak, hogy lássátok, a mai korszerű mikroszkópok milyen kiegészítő lehetnek még.
+		% 1-1 bekezdés a két témáról.
+		Bizonyos mérésekhez szükséges lehet a minta felületének nagy mértékű simasága és tisztasága. A simaság például a visszaszórt elektronok szögének meghatározását segítheti. A tisztító hatása a felületi szennyeződések eltávolításával az anyagi minőség meghatározását segíti. Csupán a kristálytípus meghatározásához ez a precizitás legtöbb esetben nem szükséges, azonban rácsparaméterek meghatározásánál minden módszer, ami a szögek meghatározását segíti hasznos: a végeredmény nem egy diszkrét érték, mint a rácstípus. Különböző részecske méretű emulziókkal való polírozás és a FIB (focused ion beam) eljárás a minta felületének simaságát és tisztaságát növelik.
+		
+		A FIB eljárás mind a minta felületének simítására, mind tisztítására alkalmas. Mivel az eljárás a makroszkopikus világ részecskeszámaihoz képest kevés iont használ, csak kis mennyiségű anyag eltávolítására alkalmas. Így a FIB általában a minta előkészítésének utolsó lépése, és először durvább módszerekkel, például polírozással kell kezelni.
+		
+		Az EBSD (Electron backscatter diffraction) módszer az elasztikusan visszaszórt elektronok térbeli eloszlását méri meg.  Alkalmas a kristály típusának és paramétereinek a meghatározására, valamint a fókuszban lévő kristály orientációjának a meghatározására. A anyagban a mechanikai feszültség meghatározására is alkalmas a módszer. Érdemes megjegyezni, hogy a jó fókuszálás érdekében a pásztázó elektronmikroszkóp elektronforrása úgy van kialakítva, hogy az elektronok energiájának kicsi legyen az eltérése, viszont elektron diffrakciós képek esetében a különböző hullámhosszú részecskék hasznosak lehetnek, ha a kristályparamétert nem cél meghatározni.
+	\section{Mérések}
+	\subsection{Biológiai minta}
+		A biológiai mintát, egy kis méretű rovart, vékony arany bevonattal preparálták. A bevonat szerepe, hogy a minta felülete jó vezető legyen. Ennek köszönhetően az elektronmikroszkóp sugara nem okoz nagy
+		%-„ …fókuszpontban, ezzel elkerülve a minta közelében létrejövő ismeretlen elektromos mező hatásait.” –helytelen, fizikailag nem korrekt fogalmazás mód. Nem csak a fókuszpontban történik, kvázi marad meg a jelenség. Az utána való tagmondat egyáltalán nem kell, létrejövő ismeretlen elektromos mező nincsen.  A szitu egyszerű, töltés halmozódik fel a minta felszínén, aminek következtében a képalkotást minősége jelentősen romlik.
+		%Szigetelő felszín esetében a töltések a fókuszponton kívül is megmaradnak, javítottam. Az ismeretlen elektromos mezőt csak azért írtam bele eredetileg, mert arra gondoltam, hogy ha pontosan ismertek lennének a minta elektromos tulajdonságai, akkor a felhalmozódott töltések hatását esetleg utólag figyelembe lehetne venni. Persze értem, hogy a szokásos eljárás a minta kezelése.
+		töltés felhalmozódást, amely a képalkotás minőségét jelentősen rontaná. 
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=1]{./figs/2021-09-23-Biology_sample_002(x1.5k).pdf}
-			\caption{BSE módban készült kép a biólógiai mintáról. A vékony arany bevonat ellenére (nincs Z kontraszt) kontrasztos a kép, ami azt mutatja, hogy a BSE mód is legalább kis mértékben érzékeny a minta geometriájára.}
+			%-„BSE mód is legalább kis mértékben érzékeny a minta geometriájára.” Nem helyes. A BSE is érzékeny a topográfiára (persze nem olyan minőségben, de érzékeny), csak ad egy plusz ú.n. Z-kontraszt információt.
+			%-Ha jól értettem itt csak a "legalább kis mértékben" résszel volt probléma.
+			\caption{BSE módban készült kép a biólógiai mintáról. A vékony arany bevonat ellenére (nincs Z kontraszt) kontrasztos a kép, ami azt mutatja, hogy a BSE mód is érzékeny a minta geometriájára.}
 			\label{biology1}
 		\end{figure}
 		\begin{figure}[H]
@@ -102,8 +133,10 @@
 			\includegraphics[scale=1]{./figs/2021-09-23-Biology_sample_003(x1.5k).pdf}
 			\caption{SE módban készült kép, \aref{biology1}. képhez képest a kontraszt nagyobb. Ez így várható, hiszen az SE mód a minta geometriájára a legérzékenyebb.}
 		\end{figure}
-	\section{Titán minta}
-		A titánból készült mintának volt egy lyukacsos része, erről készült \aref{Tiholes}. kép SE módban. Ez a kép jól illusztrálja, hogy SE módban a geometriai információt hogyan érzékeli az elektronmikroszkóp. Látható, hogy az üregek sötétek, ennek az az oka, hogy a kilökődő másodlagos elektronok nagy része az üreg falán landol, nem jut ki a résen, így a másodlagos elektron detektor csak kevés elektront fog detektálni. Hasonló, de kevésbé drasztikusan jelen van ez az effektus lejtők és egyéb geometriai alakzatok esetében is. 
+	\subsection{Titán minta}
+		%- A titán hab fejezet első bekezdését teljesen kihagynám, kicsit sántítanak a magyarázatok. Ha valamit meg akarsz magyarázni a képről, akkor csupán az lenne, hogy a SEM kiváló mélység élességű képet ad, látszik, hogy a hab felső és alsóbb részei is élesek az elektronmikroszkópos felvételen.
+		%-A magyarázat most már a mélységélességről szól.
+		\Aref{Tiholes}. kép jól szemlélteti a nagy mélységélességét a pásztázó elektronmikroszkópnak, a buborékok aljáról és a kiemelkedések csúcsáról is éles képet katunk. A nagy mélységélesség oka, hogy az elektronsugár nyílásszöge kicsi, így a magasság függvényében a sugár átmérője lassan változik. Természetesen a mélységélességet befolyásolja a felbontás is. Nagy felbontású kép esetén kis átmérőjű elektronsugárra van szükség, ami kisebb magasságbeli eltérést engedélyez adott nyílásszög esetén.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=1]{./figs/2021-09-23-Titanium_sample_007(x50).pdf}
@@ -123,7 +156,7 @@
 			\caption{BSE módban készült kép a titán felszíni szennyeződéseiről.}
 			\label{tibse}
 		\end{figure}
-		\subsection{Röntgen spektroszkópia}
+		\subsubsection{Röntgen spektroszkópia}
 			Az elektronmikroszkópban van egy beépített röntgen detektor is. A minta által kibocsátott röntgen sugarak az anyagi minőségtől függnek, és alkalmasak a minta kvalitatív vizsgálatára is. Mivel a elektronok jól fókuszáltak, az anyagi minőséget kis, a mikroszkóp felbontásának megfelelő területeken lehet vizsgálni. Két pontban végeztük el a vizsgálatot. Az első pontot az egyik BSE módban sötétnek látszó szennyeződésen vettük fel, a másodikat pedig a tiszta titán háttéren, \aref{spots}. ábrának megfelelően.
 			\begin{figure}[H]
 				\centering
@@ -145,7 +178,7 @@
 				\caption{Spectrum 2}
 				\label{spectrum2}
 			\end{figure}
-	\section{TEM rács}
+	\subsection{TEM rács}
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=1]{./figs/2021-09-23-TEM_sample_006(x80).pdf}
